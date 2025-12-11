@@ -1,18 +1,26 @@
-#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
-int main(){
-  std::cout << "Said llego con un gato con mano amarilla de 4 dedos :)." << std::endl;
-  std::cout << "Lo que dijo Alan Albino es correcto, la cajetie con los espacio y guiones" << std::endl;
-  std::cout << "Christian dice Nice!!!" << std::endl;
-  std::cout << "Karol dijo hola en voz bajita" << std::endl;
-  std::cout << "Salvador dice lo basico y emmanuel dice que poco, \n\taunque sea basico lo poco"<< std::endl;
-  int b;
-  int c;
+void print_patt(int row)
+{
+    int count = 1; 
 
-  c=15;
-  b=4;
-  std::cout << c+b << std::endl;
-  
-// OTRO CODIO como de pruebas, actividades extras, etc.
-  return 0;
+    for (int i = 1; i <= row; i++) 
+    {
+        for (int j = 1; j <= i; j++) 
+        {
+            cout << count << " ";
+
+            count += 1;
+        }
+      
+        cout << "\n";
+    }
+}
+
+int main()
+{
+    int row = 5;
+    print_patt(row);
+    return 0;
 }
