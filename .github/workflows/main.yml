@@ -37,11 +37,11 @@ jobs:
           push: true # Empuja la image resultado al registro
           tags: |
             ${{secrets.DOCKER_USERNAME }}/mensaje-pila:latest
-            ${{ secrets.DOCKER_USERNAME }}/mensaje-pila:${{ steps.vars.outputs.IMAGE_TAG }}
+            ${{ secrets.DOCKER_USERNAME }}/mensaje-pila:betatest
 
       # Paso 4: (opcional) Agregar una confirmacion de la etapa CD haya sido completado.
       - name: Deployment Confirmation
         run: | 
           echo "Successfully built and pushed the image to Docker Hub!"
           echo "Image: ${{secrets.DOCKER_USERNAME }}/mensaje-pila:latest"
-          echo "Version Tag: ${{ secrets.DOCKER_USERNAME }}/mensaje-pila:${{ steps.vars.outputs.IMAGE_TAG }}"
+          echo "Version Tag: ${{ secrets.DOCKER_USERNAME }}/mensaje-pila:betatest"
