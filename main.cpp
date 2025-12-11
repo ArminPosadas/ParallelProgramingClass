@@ -20,7 +20,7 @@ void print_patt(int row)
 
 int main()
 {
-    int row = 5;
+    int row = 15;
     print_patt(row);
     return 0;
 }
